@@ -14,5 +14,8 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
+{
+    IBOutlet UIButton *addBookButton;
+}
 
 @end
