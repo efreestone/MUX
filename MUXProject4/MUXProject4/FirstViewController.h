@@ -15,7 +15,7 @@
 
 @interface FirstViewController : UIViewController
 {
-    IBOutlet UIButton *addBookButton;
+    IBOutlet UINavigationItem *addBookButton;
 }
 
 @end

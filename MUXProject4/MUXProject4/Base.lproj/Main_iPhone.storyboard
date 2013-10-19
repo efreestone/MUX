@@ -33,15 +33,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gCc-li-ESf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMe-Se-9gf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1916" y="-982"/>
+            <point key="canvasLocation" x="-959" y="-172"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="mxn-nu-Y3x">
             <objects>
-                <viewController id="82w-tM-D4J" sceneMemberID="viewController">
+                <viewController id="82w-tM-D4J" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XgW-yH-w5s"/>
                         <viewControllerLayoutGuide type="bottom" id="XIT-I1-FsI"/>
@@ -58,15 +59,26 @@
                                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <items>
-                                            <navigationItem title="Title" id="eZX-Wc-Bf1">
-                                                <barButtonItem key="rightBarButtonItem" systemItem="add" id="poa-MS-RuU">
+                                            <navigationItem title="Details" id="K00-Mt-Qol">
+                                                <barButtonItem key="leftBarButtonItem" systemItem="reply" id="nAB-Uw-GDI"/>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZUe-I8-Xvt">
                                                     <connections>
-                                                        <segue destination="8o1-yT-NdN" kind="modal" id="F78-PA-Iiu"/>
+                                                        <segue destination="8o1-yT-NdN" kind="modal" id="Tnx-lp-ey4"/>
                                                     </connections>
                                                 </barButtonItem>
+                                                <connections>
+                                                    <outlet property="backBarButtonItem" destination="nAB-Uw-GDI" id="4Rm-D3-NX7"/>
+                                                </connections>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ALY-IG-0BN">
+                                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem title="Open In E-Reader" width="300" id="tT0-M5-KYm"/>
+                                        </items>
+                                    </toolbar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -77,6 +89,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zD-eg-ZEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-959" y="-742"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Gqs-bX-Y1r">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="pP6-qi-r2q" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jzr-Ag-kge">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CZ4-MO-1fc" kind="relationship" relationship="rootViewController" id="MRs-zL-s2q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OR6-N2-7ve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1974" y="-742"/>
         </scene>
         <!--First View Controller - First-->
         <scene sceneID="W3I-pn-N6e">
@@ -94,12 +121,8 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="R5K-od-Tbj">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ubk-1a-tHM">
-                                            <connections>
-                                                <segue destination="8o1-yT-NdN" kind="modal" id="3Es-lp-2F1"/>
-                                            </connections>
-                                        </barButtonItem>
+                                    <navigationItem title="Active Books" id="R5K-od-Tbj">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ubk-1a-tHM"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -117,9 +140,6 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
-                                                <connections>
-                                                    <segue destination="82w-tM-D4J" kind="modal" id="1cw-wz-Rjg"/>
-                                                </connections>
                                             </tableViewCell>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="FsJ-uT-Spi">
                                                 <rect key="frame" x="0.0" y="44" width="280" height="44"/>
@@ -128,9 +148,6 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
-                                                <connections>
-                                                    <segue destination="82w-tM-D4J" kind="modal" id="njj-1f-3T3"/>
-                                                </connections>
                                             </tableViewCell>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="AiI-ty-cCy">
                                                 <rect key="frame" x="0.0" y="88" width="280" height="44"/>
@@ -144,17 +161,33 @@
                                     </tableViewSection>
                                 </sections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfZ-v9-w4Y">
+                                <rect key="frame" x="137" y="64" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="u1e-5L-l1D"/>
-                    <navigationItem key="navigationItem" id="5D3-7V-OyH"/>
+                    <tabBarItem key="tabBarItem" title="Active Books" image="first" id="u1e-5L-l1D"/>
+                    <navigationItem key="navigationItem" id="5D3-7V-OyH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YyY-y0-nO2">
+                            <connections>
+                                <segue destination="8o1-yT-NdN" kind="push" identifier="addView" id="1XL-He-lXE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addBookButton" destination="5D3-7V-OyH" id="15Q-da-1Il"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1441" y="-742"/>
         </scene>
-        <!--Third View Controller - Third-->
+        <!--Third View Controller - Settings-->
         <scene sceneID="pKG-3Q-fWN">
             <objects>
                 <viewController id="cAy-VQ-quy" customClass="ThirdViewController" sceneMemberID="viewController">
@@ -170,7 +203,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="ERT-BO-V9u">
+                                    <navigationItem title="Settings" id="ERT-BO-V9u">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dJa-8a-DqK">
                                             <connections>
                                                 <segue destination="8o1-yT-NdN" kind="modal" id="w34-Ja-YYk"/>
@@ -182,7 +215,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Third" image="second" id="bgX-7e-cvJ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="second" id="bgX-7e-cvJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRo-Ea-NHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,7 +252,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="LCW-WY-wU5">
+                                    <navigationItem title="All Books" id="LCW-WY-wU5">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3eE-RK-bpD">
                                             <connections>
                                                 <segue destination="8o1-yT-NdN" kind="modal" id="OSu-pg-PeE"/>
@@ -239,7 +272,7 @@
                             <constraint firstAttribute="centerY" secondItem="DcM-Fx-MKR" secondAttribute="centerY" id="lHZ-e8-ii2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="Z7h-1E-pvt"/>
+                    <tabBarItem key="tabBarItem" title="All Books" image="second" id="Z7h-1E-pvt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
@@ -249,6 +282,7 @@
         <scene sceneID="Vex-rW-GRa">
             <objects>
                 <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4tq-yk-6cr"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -277,7 +311,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="njj-1f-3T3"/>
-        <segue reference="3Es-lp-2F1"/>
+        <segue reference="1XL-He-lXE"/>
+        <segue reference="MRs-zL-s2q"/>
     </inferredMetricsTieBreakers>
 </document>

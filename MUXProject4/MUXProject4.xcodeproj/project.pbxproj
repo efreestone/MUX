@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B860611D1812276B00ACFDB7 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B860611C1812276B00ACFDB7 /* DetailViewController.m */; };
 		B8B14BA71811F93400111606 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B14BA61811F93400111606 /* ThirdViewController.m */; };
 		B8B14BAA181202FA00111606 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B14BA9181202FA00111606 /* AddViewController.m */; };
 		B8C327681811F385003A346A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C327671811F385003A346A /* Foundation.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B860611B1812276B00ACFDB7 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B860611C1812276B00ACFDB7 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		B8B14BA51811F93400111606 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		B8B14BA61811F93400111606 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		B8B14BA8181202FA00111606 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				B8B14BA61811F93400111606 /* ThirdViewController.m */,
 				B8B14BA8181202FA00111606 /* AddViewController.h */,
 				B8B14BA9181202FA00111606 /* AddViewController.m */,
+				B860611B1812276B00ACFDB7 /* DetailViewController.h */,
+				B860611C1812276B00ACFDB7 /* DetailViewController.m */,
 			);
 			path = MUXProject4;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				B8C327781811F385003A346A /* AppDelegate.m in Sources */,
 				B8C327811811F385003A346A /* FirstViewController.m in Sources */,
 				B8C327741811F385003A346A /* main.m in Sources */,
+				B860611D1812276B00ACFDB7 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
