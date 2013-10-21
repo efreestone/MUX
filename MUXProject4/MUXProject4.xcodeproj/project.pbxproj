@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B860611D1812276B00ACFDB7 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B860611C1812276B00ACFDB7 /* DetailViewController.m */; };
+		B8B14BA71811F93400111606 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B14BA61811F93400111606 /* ThirdViewController.m */; };
+		B8B14BAA181202FA00111606 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B14BA9181202FA00111606 /* AddViewController.m */; };
 		B8C327681811F385003A346A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C327671811F385003A346A /* Foundation.framework */; };
 		B8C3276A1811F385003A346A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C327691811F385003A346A /* CoreGraphics.framework */; };
 		B8C3276C1811F385003A346A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C3276B1811F385003A346A /* UIKit.framework */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B860611B1812276B00ACFDB7 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B860611C1812276B00ACFDB7 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B8B14BA51811F93400111606 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		B8B14BA61811F93400111606 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		B8B14BA8181202FA00111606 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		B8B14BA9181202FA00111606 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		B8C327641811F385003A346A /* MUXProject4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MUXProject4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C327671811F385003A346A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B8C327691811F385003A346A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +136,12 @@
 				B8C327831811F385003A346A /* SecondViewController.m */,
 				B8C327851811F386003A346A /* Images.xcassets */,
 				B8C3276E1811F385003A346A /* Supporting Files */,
+				B8B14BA51811F93400111606 /* ThirdViewController.h */,
+				B8B14BA61811F93400111606 /* ThirdViewController.m */,
+				B8B14BA8181202FA00111606 /* AddViewController.h */,
+				B8B14BA9181202FA00111606 /* AddViewController.m */,
+				B860611B1812276B00ACFDB7 /* DetailViewController.h */,
+				B860611C1812276B00ACFDB7 /* DetailViewController.m */,
 			);
 			path = MUXProject4;
 			sourceTree = "<group>";
@@ -259,9 +274,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8C327841811F385003A346A /* SecondViewController.m in Sources */,
+				B8B14BA71811F93400111606 /* ThirdViewController.m in Sources */,
+				B8B14BAA181202FA00111606 /* AddViewController.m in Sources */,
 				B8C327781811F385003A346A /* AppDelegate.m in Sources */,
 				B8C327811811F385003A346A /* FirstViewController.m in Sources */,
 				B8C327741811F385003A346A /* main.m in Sources */,
+				B860611D1812276B00ACFDB7 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +498,7 @@
 				B8C3279E1811F386003A346A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8C3279F1811F386003A346A /* Build configuration list for PBXNativeTarget "MUXProject4Tests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +507,7 @@
 				B8C327A11811F386003A346A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -4,7 +4,7 @@
 // October 18th, 2013
 
 //
-//  FirstViewController.h
+//  ThirdViewController.h
 //  MUXProject4
 //
 //  Created by Elijah Freestone on 10/18/13.
@@ -13,9 +13,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-{
-    IBOutlet UINavigationItem *addBookButton;
-}
+@interface ThirdViewController : UIViewController
 
 @end
