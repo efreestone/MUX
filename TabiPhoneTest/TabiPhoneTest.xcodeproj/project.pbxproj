@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B83942AE1815D5D80044CA56 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = B83942AD1815D5D80044CA56 /* background.png */; };
 		B868284F1814D75D000099E8 /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B868284E1814D75D000099E8 /* PlayerCell.m */; };
 		B8AAA54A1813315F00426402 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AAA5491813315F00426402 /* Foundation.framework */; };
 		B8AAA54C1813315F00426402 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AAA54B1813315F00426402 /* CoreGraphics.framework */; };
@@ -61,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B83942AD1815D5D80044CA56 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		B868284D1814D75D000099E8 /* PlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCell.h; sourceTree = "<group>"; };
 		B868284E1814D75D000099E8 /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
 		B8AAA5461813315F00426402 /* TabiPhoneTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabiPhoneTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +171,7 @@
 		B8AAA54F1813315F00426402 /* TabiPhoneTest */ = {
 			isa = PBXGroup;
 			children = (
+				B83942AD1815D5D80044CA56 /* background.png */,
 				B8AAA57E181334C700426402 /* Images */,
 				B8AAA5581813315F00426402 /* AppDelegate.h */,
 				B8AAA5591813315F00426402 /* AppDelegate.m */,
@@ -332,6 +335,7 @@
 				B8AAA5A6181334C700426402 /* 4StarsSmall@2x.png in Resources */,
 				B8AAA5541813315F00426402 /* InfoPlist.strings in Resources */,
 				B8AAA5AC181334C700426402 /* Gestures@2x.png in Resources */,
+				B83942AE1815D5D80044CA56 /* background.png in Resources */,
 				B8AAA59F181334C700426402 /* 3Stars.png in Resources */,
 				B8AAA5AB181334C700426402 /* Gestures.png in Resources */,
 				B8AAA55D1813315F00426402 /* Main.storyboard in Resources */,

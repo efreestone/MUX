@@ -29,6 +29,10 @@
 
 - (void)viewDidLoad
 {
+    
+    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
