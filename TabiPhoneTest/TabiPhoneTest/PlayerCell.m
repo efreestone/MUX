@@ -10,6 +10,8 @@
 
 @implementation PlayerCell
 
+@synthesize nameLabel, gameLabel, ratingImageView;
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

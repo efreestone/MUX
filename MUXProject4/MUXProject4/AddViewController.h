@@ -1,3 +1,8 @@
+// Elijah Freestone
+// MUX 1310
+// Project 4
+// October 18th, 2013
+
 //
 //  AddViewController.h
 //  MUXProject4

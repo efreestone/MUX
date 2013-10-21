@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B868284F1814D75D000099E8 /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B868284E1814D75D000099E8 /* PlayerCell.m */; };
 		B8AAA54A1813315F00426402 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AAA5491813315F00426402 /* Foundation.framework */; };
 		B8AAA54C1813315F00426402 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AAA54B1813315F00426402 /* CoreGraphics.framework */; };
 		B8AAA54E1813315F00426402 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AAA54D1813315F00426402 /* UIKit.framework */; };
@@ -60,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B868284D1814D75D000099E8 /* PlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCell.h; sourceTree = "<group>"; };
+		B868284E1814D75D000099E8 /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
 		B8AAA5461813315F00426402 /* TabiPhoneTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabiPhoneTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AAA5491813315F00426402 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B8AAA54B1813315F00426402 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -178,6 +181,8 @@
 				B8AAA5B31813367700426402 /* Player.m */,
 				B8AAA5B518133AC400426402 /* PlayersViewController.h */,
 				B8AAA5B618133AC400426402 /* PlayersViewController.m */,
+				B868284D1814D75D000099E8 /* PlayerCell.h */,
+				B868284E1814D75D000099E8 /* PlayerCell.m */,
 			);
 			path = TabiPhoneTest;
 			sourceTree = "<group>";
@@ -367,6 +372,7 @@
 				B8AAA5B718133AC400426402 /* PlayersViewController.m in Sources */,
 				B8AAA55A1813315F00426402 /* AppDelegate.m in Sources */,
 				B8AAA5561813315F00426402 /* main.m in Sources */,
+				B868284F1814D75D000099E8 /* PlayerCell.m in Sources */,
 				B8AAA5B41813367700426402 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

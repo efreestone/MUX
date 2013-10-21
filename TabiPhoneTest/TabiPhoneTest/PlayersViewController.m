@@ -8,6 +8,7 @@
 
 #import "PlayersViewController.h"
 #import "Player.h"
+#import "PlayerCell.h"
 
 @interface PlayersViewController ()
 
@@ -70,16 +71,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
+	PlayerCell *cell = (PlayerCell *)[tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
 	Player *player = [self.players objectAtIndex:indexPath.row];
-	UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
-	nameLabel.text = player.name;
-	UILabel *gameLabel = (UILabel *)[cell viewWithTag:101];
-	gameLabel.text = player.name;
-	UIImageView * ratingImageView = (UIImageView *)
-    [cell viewWithTag:102];
-	ratingImageView.image = [self imageForRating:player.rating];
+	cell.nameLabel.text = player.name;
+	cell.gameLabel.text = player.game;
+	cell.ratingImageView.image = [self
+                                  imageForRating:player.rating];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+	if (editingStyle == UITableViewCellEditingStyleDelete){
+		[self.players removeObjectAtIndex:indexPath.row];
+		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+	}
 }
 
 /*
