@@ -1,22 +1,29 @@
+// Elijah Freestone
+// MUX 1310
+// Project 4
+// October 18th, 2013
+
 //
-//  PlayersViewController.m
-//  TabiPhoneTest
+//  ActiveViewController.m
+//  MUXProject4
 //
-//  Created by Elijah Freestone on 10/19/13.
+//  Created by Elijah Freestone on 10/21/13.
 //  Copyright (c) 2013 Elijah Freestone. All rights reserved.
 //
 
-#import "PlayersViewController.h"
-#import "Player.h"
-#import "PlayerCell.h"
+#import "ActiveViewController.h"
+//Import active book
+#import "ActiveBooks.h"
+//Import book cell
+#import "BookCell.h"
 
-@interface PlayersViewController ()
+@interface ActiveViewController ()
 
 @end
 
-@implementation PlayersViewController
+@implementation ActiveViewController
 
-@synthesize players;
+@synthesize activeBooksArray;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,8 +37,13 @@
 - (void)viewDidLoad
 {
     
+    //Override background and apply image
     self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     self.tableView.backgroundColor = [UIColor clearColor];
+    
+    //Override inset to provide space between nav bar and first cell
+    UIEdgeInsets inset = UIEdgeInsetsMake(15, 0, 0, 0);
+    self.tableView.contentInset = inset;
     
     [super viewDidLoad];
 
@@ -39,7 +51,8 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //Changed to add edit to left side instead of right (right will be + sign)
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,45 +63,36 @@
 
 #pragma mark - Table view data source
 
+//Override to remove extra seperator lines after last cell. Works but removes the line below the last cell which I want to keep
+/*- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    // This will create a "invisible" footer
+    return 0.01f;
+}*/
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	return 1;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return [self.players count];
-}
-
-- (UIImage *)imageForRating:(int)rating
-{
-	switch (rating)
-	{
-		case 1: return [UIImage imageNamed:@"1StarSmall.png"];
-		case 2: return [UIImage imageNamed:@"2StarsSmall.png"];
-		case 3: return [UIImage imageNamed:@"3StarsSmall.png"];
-		case 4: return [UIImage imageNamed:@"4StarsSmall.png"];
-		case 5: return [UIImage imageNamed:@"5StarsSmall.png"];
-	}
-	return nil;
+    // Return the number of rows in the section.
+    return [self.activeBooksArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	PlayerCell *cell = (PlayerCell *)[tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
-	Player *player = [self.players objectAtIndex:indexPath.row];
-	cell.nameLabel.text = player.name;
-	cell.gameLabel.text = player.game;
-	cell.ratingImageView.image = [self
-                                  imageForRating:player.rating];
+	BookCell *cell = (BookCell *) [tableView dequeueReusableCellWithIdentifier:@"ActiveCell"];
+	ActiveBooks *activeBook = [self.activeBooksArray objectAtIndex:indexPath.row];
+    cell.bookCover.image = activeBook.coverImage;
+	cell.authorLabel.text = activeBook.authorName;
+	cell.titleLabel.text = activeBook.bookTitle;
+    cell.currentLabel.text = activeBook.currentPage;
+    
+    //Override to remove extra seperator lines after the last cell
+    [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectMake(0,0,0,0)]];
+    
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-	if (editingStyle == UITableViewCellEditingStyleDelete){
-		[self.players removeObjectAtIndex:indexPath.row];
-		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-	}
 }
 
 /*

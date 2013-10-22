@@ -7,17 +7,68 @@
 //  AppDelegate.m
 //  MUXProject4
 //
-//  Created by Elijah Freestone on 10/18/13.
+//  Created by Elijah Freestone on 10/21/13.
 //  Copyright (c) 2013 Elijah Freestone. All rights reserved.
 //
 
 #import "AppDelegate.h"
+//Import active, all books plus containers
+#import "ActiveViewController.h"
+#import "ActiveBooks.h"
+#import "AllViewController.h"
+#import "AllBooks.h"
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    NSMutableArray *activeBooksArray, *allBooksArray;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    //Create active books array and fill. Each new book entry is a new instance of ActiveBooks container class
+    activeBooksArray = [NSMutableArray arrayWithCapacity:20];
+    //Book 1
+	ActiveBooks *activeBook = [[ActiveBooks alloc] init];
+    activeBook.coverImage = [UIImage imageNamed:@"designing-the-obvious.png"];
+	activeBook.authorName = @"Robert Hoekman, Jr.";
+	activeBook.bookTitle = @"Designing The Obvious";
+	activeBook.currentPage = @"Page 158 (Updated 8-6-13)";
+	[activeBooksArray addObject:activeBook];
+    //Book 2
+	activeBook = [[ActiveBooks alloc] init];
+    activeBook.coverImage = [UIImage imageNamed:@"midnight.png"];
+    activeBook.authorName = @"Dean Koontz";
+	activeBook.bookTitle = @"Midnight";
+	activeBook.currentPage = @"Page 91 (Updated 7-18-13)";
+	[activeBooksArray addObject:activeBook];
+    //Book 3
+    activeBook = [[ActiveBooks alloc] init];
+    activeBook.coverImage = [UIImage imageNamed:@"objective-c-programming.png"];
+    activeBook.authorName = @"Aaron Hillegass";
+	activeBook.bookTitle = @"Objective-C Programming";
+	activeBook.currentPage = @"Page 190 (Updated 10-10-13)";
+	[activeBooksArray addObject:activeBook];
+    //Book 4
+    activeBook = [[ActiveBooks alloc] init];
+    activeBook.coverImage = [UIImage imageNamed:@"sworn-to-silence.png"];
+    activeBook.authorName = @"Linda Castilla";
+	activeBook.bookTitle = @"Sworn to Silence";
+	activeBook.currentPage = @"Page 34 (Updated 9-12-13)";
+	[activeBooksArray addObject:activeBook];
+    //Book 5
+    activeBook = [[ActiveBooks alloc] init];
+    activeBook.coverImage = [UIImage imageNamed:@"working-across-cultures.png"];
+    activeBook.authorName = @"John Hooker";
+	activeBook.bookTitle = @"Working Across Cultures";
+	activeBook.currentPage = @"Page 331 (Updated 4-1-13)";
+	[activeBooksArray addObject:activeBook];
+	//Dig through stack to find correct controller
+	UITabBarController *tabBarController =
+    (UITabBarController *)self.window.rootViewController;
+	UINavigationController *navigationController =
+    [[tabBarController viewControllers] objectAtIndex:0];
+	ActiveViewController *activeViewController =
+    [[navigationController viewControllers] objectAtIndex:0];
+	activeViewController.activeBooksArray = activeBooksArray;
     return YES;
 }
 							

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B8C327631811F385003A346A"
+               BlueprintIdentifier = "B89E96461815DC1E00965611"
                BuildableName = "MUXProject4.app"
                BlueprintName = "MUXProject4"
                ReferencedContainer = "container:MUXProject4.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B8C3278A1811F386003A346A"
+               BlueprintIdentifier = "B89E966A1815DC1E00965611"
                BuildableName = "MUXProject4Tests.xctest"
                BlueprintName = "MUXProject4Tests"
                ReferencedContainer = "container:MUXProject4.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B8C327631811F385003A346A"
+            BlueprintIdentifier = "B89E96461815DC1E00965611"
             BuildableName = "MUXProject4.app"
             BlueprintName = "MUXProject4"
             ReferencedContainer = "container:MUXProject4.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B8C327631811F385003A346A"
+            BlueprintIdentifier = "B89E96461815DC1E00965611"
             BuildableName = "MUXProject4.app"
             BlueprintName = "MUXProject4"
             ReferencedContainer = "container:MUXProject4.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B8C327631811F385003A346A"
+            BlueprintIdentifier = "B89E96461815DC1E00965611"
             BuildableName = "MUXProject4.app"
             BlueprintName = "MUXProject4"
             ReferencedContainer = "container:MUXProject4.xcodeproj">

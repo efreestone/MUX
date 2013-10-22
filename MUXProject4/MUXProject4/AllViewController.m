@@ -1,22 +1,25 @@
+// Elijah Freestone
+// MUX 1310
+// Project 4
+// October 18th, 2013
+
 //
-//  PlayersViewController.m
-//  TabiPhoneTest
+//  AllViewController.m
+//  MUXProject4
 //
-//  Created by Elijah Freestone on 10/19/13.
+//  Created by Elijah Freestone on 10/21/13.
 //  Copyright (c) 2013 Elijah Freestone. All rights reserved.
 //
 
-#import "PlayersViewController.h"
-#import "Player.h"
-#import "PlayerCell.h"
+#import "AllViewController.h"
 
-@interface PlayersViewController ()
+@interface AllViewController ()
 
 @end
 
-@implementation PlayersViewController
+@implementation AllViewController
 
-@synthesize players;
+@synthesize allBooksArray;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,10 +32,6 @@
 
 - (void)viewDidLoad
 {
-    
-    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-    self.tableView.backgroundColor = [UIColor clearColor];
-    
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -52,43 +51,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	return 1;
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return [self.players count];
-}
-
-- (UIImage *)imageForRating:(int)rating
-{
-	switch (rating)
-	{
-		case 1: return [UIImage imageNamed:@"1StarSmall.png"];
-		case 2: return [UIImage imageNamed:@"2StarsSmall.png"];
-		case 3: return [UIImage imageNamed:@"3StarsSmall.png"];
-		case 4: return [UIImage imageNamed:@"4StarsSmall.png"];
-		case 5: return [UIImage imageNamed:@"5StarsSmall.png"];
-	}
-	return nil;
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	PlayerCell *cell = (PlayerCell *)[tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
-	Player *player = [self.players objectAtIndex:indexPath.row];
-	cell.nameLabel.text = player.name;
-	cell.gameLabel.text = player.game;
-	cell.ratingImageView.image = [self
-                                  imageForRating:player.rating];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-	if (editingStyle == UITableViewCellEditingStyleDelete){
-		[self.players removeObjectAtIndex:indexPath.row];
-		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-	}
 }
 
 /*

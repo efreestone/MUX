@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>25100F1C-196B-40E8-9EC2-375A2EF7DCA6</string>
+	<string>10C98BD9-3C2E-4C42-834B-FCE40AE8C1DC</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MUXProject4</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>49BDB170-819D-4DB2-8EB0-BC42F86B7105</key>
+		<key>7F7EE96D-A77E-4E35-9F10-0B729A413583</key>
 		<string>ssh://github.com/efreestone/MUX</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MUXProject4/MUXProject4.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>49BDB170-819D-4DB2-8EB0-BC42F86B7105</key>
+		<key>7F7EE96D-A77E-4E35-9F10-0B729A413583</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>49BDB170-819D-4DB2-8EB0-BC42F86B7105</string>
+	<string>7F7EE96D-A77E-4E35-9F10-0B729A413583</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>49BDB170-819D-4DB2-8EB0-BC42F86B7105</string>
+			<string>7F7EE96D-A77E-4E35-9F10-0B729A413583</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MUX</string>
 		</dict>

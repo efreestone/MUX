@@ -4,7 +4,7 @@
 // October 18th, 2013
 
 //
-//  AppDelegate.h
+//  ActiveViewController.h
 //  MUXProject4
 //
 //  Created by Elijah Freestone on 10/21/13.
@@ -13,8 +13,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface ActiveViewController : UITableViewController {
+    IBOutlet UITableView *myTableView;
+}
 
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) NSMutableArray *activeBooksArray;
 
 @end
