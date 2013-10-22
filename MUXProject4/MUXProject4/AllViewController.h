@@ -4,7 +4,7 @@
 // October 18th, 2013
 
 //
-//  AppDelegate.h
+//  AllViewController.h
 //  MUXProject4
 //
 //  Created by Elijah Freestone on 10/21/13.
@@ -13,8 +13,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AllViewController : UITableViewController
 
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) NSMutableArray *allBooksArray;
 
 @end

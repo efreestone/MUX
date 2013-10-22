@@ -4,17 +4,18 @@
 // October 18th, 2013
 
 //
-//  AppDelegate.h
+//  AllBooks.m
 //  MUXProject4
 //
 //  Created by Elijah Freestone on 10/21/13.
 //  Copyright (c) 2013 Elijah Freestone. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AllBooks.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@implementation AllBooks
 
-@property (strong, nonatomic) UIWindow *window;
+//synthesize for geter/setter of book details
+@synthesize bookTitle, authorName, currentPage, publisher, datePublished, isbnNumber, bookType;
 
 @end
