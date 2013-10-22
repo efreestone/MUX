@@ -11,7 +11,7 @@
 @implementation BookCell
 
 //Synthesize for getter/setter
-@synthesize bookCover, authorLabel, titleLabel;
+@synthesize bookCover, authorLabel, titleLabel, currentLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

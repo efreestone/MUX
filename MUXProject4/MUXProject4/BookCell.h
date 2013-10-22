@@ -16,5 +16,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *authorLabel;
 //Declare book title label
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+//Declare current page label
+@property (strong, nonatomic) IBOutlet UILabel *currentLabel;
 
 @end

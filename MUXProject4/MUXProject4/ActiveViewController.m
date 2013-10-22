@@ -51,7 +51,8 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //Changed to add edit to left side instead of right (right will be + sign)
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,6 +62,12 @@
 }
 
 #pragma mark - Table view data source
+
+//Override to remove extra seperator lines after last cell. Works but removes the line below the last cell which I want to keep
+/*- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    // This will create a "invisible" footer
+    return 0.01f;
+}*/
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -80,16 +87,12 @@
     cell.bookCover.image = activeBook.coverImage;
 	cell.authorLabel.text = activeBook.authorName;
 	cell.titleLabel.text = activeBook.bookTitle;
-    return cell;
+    cell.currentLabel.text = activeBook.currentPage;
     
-    /*PlayerCell *cell = (PlayerCell *)[tableView
-     dequeueReusableCellWithIdentifier:@"PlayerCell"];
-     Player *player = [self.players objectAtIndex:indexPath.row];
-     cell.nameLabel.text = player.name;
-     cell.gameLabel.text = player.game;
-     cell.ratingImageView.image = [self
-     imageForRating:player.rating];
-     return cell;*/
+    //Override to remove extra seperator lines after the last cell
+    [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectMake(0,0,0,0)]];
+    
+    return cell;
 }
 
 /*

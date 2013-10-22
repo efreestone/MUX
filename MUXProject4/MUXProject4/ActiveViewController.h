@@ -13,7 +13,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ActiveViewController : UITableViewController
+@interface ActiveViewController : UITableViewController {
+    IBOutlet UITableView *myTableView;
+}
 
 @property (nonatomic, strong) NSMutableArray *activeBooksArray;
 
