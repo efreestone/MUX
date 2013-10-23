@@ -184,4 +184,25 @@
 
  */
 
+//Function to notify of delegate
+/*- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	if ([segue.identifier isEqualToString:@"AddBook"]) {
+		UINavigationController *navigationController =
+        segue.destinationViewController;
+		AddBookViewController *addBookViewController = [[navigationController viewControllers] objectAtIndex:0];
+		addBookViewController.delegate = self;
+	}
+}*/
+
+
+#pragma mark - AddBookViewControllerDelegate
+
+- (void)addBookViewControllerDidCancel:(AddBookViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addBookViewControllerDidSave:(AddBookViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

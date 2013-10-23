@@ -12,10 +12,10 @@
 //
 
 #import <UIKit/UIKit.h>
+//Import add book
+#import "AddBookViewController.h"
 
-@interface ActiveViewController : UITableViewController {
-    IBOutlet UITableView *myTableView;
-}
+@interface ActiveViewController : UITableViewController //<AddBookViewControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *activeBooksArray;
 

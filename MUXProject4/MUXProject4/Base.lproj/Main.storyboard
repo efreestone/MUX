@@ -68,8 +68,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Book" id="yA1-rY-eIW">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DKq-aV-cPA"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="e2i-H9-0rI"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DKq-aV-cPA">
+                            <connections>
+                                <action selector="onCancel:" destination="6US-6t-jUm" id="Ddg-dc-NAX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="e2i-H9-0rI">
+                            <connections>
+                                <action selector="onSave:" destination="6US-6t-jUm" id="Wup-c6-GX1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTq-hg-cnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -133,13 +141,10 @@
                     <navigationItem key="navigationItem" title="Active Books" id="2ga-Mw-YZ5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ntf-r1-bZ1">
                             <connections>
-                                <segue destination="asj-Jx-gCR" kind="modal" id="nRf-6n-lYo"/>
+                                <segue destination="asj-Jx-gCR" kind="modal" identifier="AddBook" id="nRf-6n-lYo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="myTableView" destination="kZW-Wd-Xk4" id="0cM-La-Pze"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aq6-Iz-rob" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

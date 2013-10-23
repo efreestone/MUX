@@ -12,12 +12,17 @@
 //
 
 #import "AddBookViewController.h"
+//Import active books view controller
+#import "ActiveViewController.h"
 
 @interface AddBookViewController ()
 
 @end
 
 @implementation AddBookViewController
+
+//Synthesize for getter/setter
+//@synthesize delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -125,5 +130,16 @@
 }
 
  */
+
+//Triggered when cancel button is hit
+- (IBAction)onCancel:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
+	//[self.delegate addBooksViewControllerDidCancel:self];
+}
+//Triggered when save button is hit
+- (IBAction)onSave:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
+	//[self.delegate addBooksViewControllerDidSave:self];
+}
 
 @end

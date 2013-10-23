@@ -13,6 +13,22 @@
 
 #import <UIKit/UIKit.h>
 
+/*@class AddBookViewController;
+//Set up delegate protocol
+@protocol AddBookViewControllerDelegate <NSObject>
+//Triggered when cancel button is hit
+- (void)addBookViewControllerDidCancel:(AddBookViewController *)controller;
+//Triggered when save button is hit
+- (void)addBookViewControllerDidSave:(AddBookViewController *)controller;
+
+@end*/
+
 @interface AddBookViewController : UITableViewController
+
+//@property (nonatomic, weak) NSObject <AddBookViewControllerDelegate> *delegate;
+//Declare ibactions for save and cancel buttons
+- (IBAction)onCancel:(id)sender;
+- (IBAction)onSave:(id)sender;
+
 
 @end
