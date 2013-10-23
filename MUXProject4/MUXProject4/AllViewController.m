@@ -12,6 +12,10 @@
 //
 
 #import "AllViewController.h"
+//Import all book
+#import "AllBooks.h"
+//Import book cell
+#import "BookCell.h"
 
 @interface AllViewController ()
 
@@ -32,13 +36,56 @@
 
 - (void)viewDidLoad
 {
+    //Override background and apply image
+    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
+    //Create all books array and fill. Each new book entry is a new instance of AllBooks container class
+    allBooksArray = [NSMutableArray arrayWithCapacity:20];
+    //Book 1 and cast/alloc of AllBooks
+    AllBooks *allBook = [[AllBooks alloc] init];
+    allBook.coverImage = [UIImage imageNamed:@"designing-the-obvious.png"];
+	allBook.authorName = @"Robert Hoekman, Jr.";
+	allBook.bookTitle = @"Designing The Obvious";
+	allBook.currentPage = @"Page 158 (Updated 8-6-13)";
+	[allBooksArray addObject:allBook];
+    //Book 2
+	allBook = [[AllBooks alloc] init];
+    allBook.coverImage = [UIImage imageNamed:@"midnight.png"];
+    allBook.authorName = @"Dean Koontz";
+	allBook.bookTitle = @"Midnight";
+	allBook.currentPage = @"Page 91 (Updated 7-18-13)";
+	[allBooksArray addObject:allBook];
+    //Book 3
+    allBook = [[AllBooks alloc] init];
+    allBook.coverImage = [UIImage imageNamed:@"objective-c-programming.png"];
+    allBook.authorName = @"Aaron Hillegass";
+	allBook.bookTitle = @"Objective-C Programming";
+	allBook.currentPage = @"Page 190 (Updated 10-10-13)";
+	[allBooksArray addObject:allBook];
+    //Book 4
+    allBook = [[AllBooks alloc] init];
+    allBook.coverImage = [UIImage imageNamed:@"sworn-to-silence.png"];
+    allBook.authorName = @"Linda Castilla";
+	allBook.bookTitle = @"Sworn to Silence";
+	allBook.currentPage = @"Page 34 (Updated 9-12-13)";
+	[allBooksArray addObject:allBook];
+    //Book 5
+    allBook = [[AllBooks alloc] init];
+    allBook.coverImage = [UIImage imageNamed:@"working-across-cultures.png"];
+    allBook.authorName = @"John Hooker";
+	allBook.bookTitle = @"Working Across Cultures";
+	allBook.currentPage = @"Page 331 (Updated 4-1-13)";
+	[allBooksArray addObject:allBook];
+    
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //Changed to add edit to left side instead of right (right will be + sign)
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,26 +98,30 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.allBooksArray count];
+    NSLog(@"count = %lu", (unsigned long)[self.allBooksArray count]);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+	BookCell *cell2 = (BookCell *) [tableView dequeueReusableCellWithIdentifier:@"AllCell"];
+	AllBooks *allBook = [self.allBooksArray objectAtIndex:indexPath.row];
+    cell2.bookCover.image = allBook.coverImage;
+	cell2.authorLabel.text = allBook.authorName;
+	cell2.titleLabel.text = allBook.bookTitle;
+    cell2.currentLabel.text = allBook.currentPage;
     
-    // Configure the cell...
+    //Override to remove extra seperator lines after the last cell
+    [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectMake(0,0,0,0)]];
     
-    return cell;
+    return cell2;
 }
 
 /*

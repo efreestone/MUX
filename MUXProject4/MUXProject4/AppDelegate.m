@@ -25,8 +25,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //Create active books array and fill. Each new book entry is a new instance of ActiveBooks container class
-    activeBooksArray = [NSMutableArray arrayWithCapacity:20];
-    //Book 1
+    /*activeBooksArray = [NSMutableArray arrayWithCapacity:20];
+    //Book 1 and cast/alloc of ActiveBooks
 	ActiveBooks *activeBook = [[ActiveBooks alloc] init];
     activeBook.coverImage = [UIImage imageNamed:@"designing-the-obvious.png"];
 	activeBook.authorName = @"Robert Hoekman, Jr.";
@@ -68,7 +68,27 @@
     [[tabBarController viewControllers] objectAtIndex:0];
 	ActiveViewController *activeViewController =
     [[navigationController viewControllers] objectAtIndex:0];
-	activeViewController.activeBooksArray = activeBooksArray;
+	activeViewController.activeBooksArray = activeBooksArray;*/
+    
+    //Create all books array and fill. Each new book entry is a new instance of AllBooks container class
+    /*allBooksArray = [NSMutableArray arrayWithCapacity:20];
+    //Book 1 and cast/alloc of AllBooks
+    AllBooks *allBook = [[AllBooks alloc] init];
+    allBook.coverImage = [UIImage imageNamed:@"designing-the-obvious.png"];
+	allBook.authorName = @"Robert Hoekman, Jr.";
+	allBook.bookTitle = @"Designing The Obvious";
+	allBook.currentPage = @"Page 158 (Updated 8-6-13)";
+	[allBooksArray addObject:allBook];*/
+    
+    //Dig through stack to find correct controller
+	/*UITabBarController *tabBarController2 =
+    (UITabBarController *)self.window.rootViewController;
+	UINavigationController *navigationController2 =
+    [[tabBarController2 viewControllers] objectAtIndex:0];*/
+	//AllViewController *allViewController =
+    //[[navigationController viewControllers] objectAtIndex:0];
+	//allViewController.allBooksArray = allBooksArray;
+    
     return YES;
 }
 							

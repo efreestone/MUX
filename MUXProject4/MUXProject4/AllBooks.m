@@ -16,6 +16,6 @@
 @implementation AllBooks
 
 //synthesize for geter/setter of book details
-@synthesize bookTitle, authorName, currentPage, publisher, datePublished, isbnNumber, bookType;
+@synthesize coverImage, bookTitle, authorName, currentPage, publisher, datePublished, isbnNumber, bookType;
 
 @end
