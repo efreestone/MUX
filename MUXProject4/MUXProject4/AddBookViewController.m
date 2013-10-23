@@ -1,3 +1,8 @@
+// Elijah Freestone
+// MUX 1310
+// Project 4
+// October 18th, 2013
+
 //
 //  AddBookViewController.m
 //  MUXProject4
@@ -25,6 +30,10 @@
 
 - (void)viewDidLoad
 {
+    //Override background and apply image
+    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
