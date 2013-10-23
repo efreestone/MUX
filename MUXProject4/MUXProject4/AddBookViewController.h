@@ -1,0 +1,13 @@
+//
+//  AddBookViewController.h
+//  MUXProject4
+//
+//  Created by Elijah Freestone on 10/22/13.
+//  Copyright (c) 2013 Elijah Freestone. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface AddBookViewController : UITableViewController
+
+@end

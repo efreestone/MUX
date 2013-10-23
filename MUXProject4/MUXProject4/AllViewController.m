@@ -40,37 +40,75 @@
     self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     self.tableView.backgroundColor = [UIColor clearColor];
     
+    /* book info vars
+     +coverImage;
+     +bookTitle;
+     +authorName;
+     +currentPage;
+     publisher;
+     datePublished;
+     isbnNumber;
+     bookType;*/
+    
     //Create all books array and fill. Each new book entry is a new instance of AllBooks container class
     allBooksArray = [NSMutableArray arrayWithCapacity:20];
     //Book 1 and cast/alloc of AllBooks
     AllBooks *allBook = [[AllBooks alloc] init];
-    allBook.coverImage = [UIImage imageNamed:@"designing-the-obvious.png"];
+    allBook.coverImage = [UIImage imageNamed:@"cocoa-and-objective-c.png"];
+    allBook.authorName = @"Scott Stevenson";
+	allBook.bookTitle = @"Cocoa and Objective-C";
+	allBook.currentPage = @"Not Active";
+    [allBooksArray addObject:allBook];
+    //Book 2
+    allBook = [[AllBooks alloc] init];
+    allBook.coverImage = [UIImage imageNamed:@"core-jini.png"];
+	allBook.authorName = @"W. Keith Edwards";
+	allBook.bookTitle = @"Core JINI";
+	allBook.currentPage = @"Not Active";
+	[allBooksArray addObject:allBook];
+    //Book 3
+    allBook = [[AllBooks alloc] init];
+    allBook.coverImage = [UIImage imageNamed:@"designing-the-obvious.png"]; 
 	allBook.authorName = @"Robert Hoekman, Jr.";
 	allBook.bookTitle = @"Designing The Obvious";
 	allBook.currentPage = @"Page 158 (Updated 8-6-13)";
 	[allBooksArray addObject:allBook];
-    //Book 2
+    //Book 4
+    allBook = [[AllBooks alloc] init];
+    allBook.coverImage = [UIImage imageNamed:@"iphone-hacks.png"];
+    allBook.authorName = @"David Jurick";
+	allBook.bookTitle = @"iPhone Hacks";
+	allBook.currentPage = @"Not Active";
+    [allBooksArray addObject:allBook];
+    //Book 5
 	allBook = [[AllBooks alloc] init];
     allBook.coverImage = [UIImage imageNamed:@"midnight.png"];
     allBook.authorName = @"Dean Koontz";
 	allBook.bookTitle = @"Midnight";
 	allBook.currentPage = @"Page 91 (Updated 7-18-13)";
 	[allBooksArray addObject:allBook];
-    //Book 3
+    //Book 6
+    allBook = [[AllBooks alloc] init];
+    allBook.coverImage = [UIImage imageNamed:@"not-just-java.png"];
+    allBook.authorName = @"Peter Van Der Linden";
+	allBook.bookTitle = @"Not Just Java (2nd Edition)";
+	allBook.currentPage = @"Not Active";
+	[allBooksArray addObject:allBook];
+    //Book 7
     allBook = [[AllBooks alloc] init];
     allBook.coverImage = [UIImage imageNamed:@"objective-c-programming.png"];
     allBook.authorName = @"Aaron Hillegass";
 	allBook.bookTitle = @"Objective-C Programming";
 	allBook.currentPage = @"Page 190 (Updated 10-10-13)";
 	[allBooksArray addObject:allBook];
-    //Book 4
+    //Book 8
     allBook = [[AllBooks alloc] init];
     allBook.coverImage = [UIImage imageNamed:@"sworn-to-silence.png"];
     allBook.authorName = @"Linda Castilla";
 	allBook.bookTitle = @"Sworn to Silence";
 	allBook.currentPage = @"Page 34 (Updated 9-12-13)";
 	[allBooksArray addObject:allBook];
-    //Book 5
+    //Book 9
     allBook = [[AllBooks alloc] init];
     allBook.coverImage = [UIImage imageNamed:@"working-across-cultures.png"];
     allBook.authorName = @"John Hooker";
