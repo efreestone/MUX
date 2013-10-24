@@ -1,31 +1,18 @@
-// Elijah Freestone
-// MUX 1310
-// Project 4
-// October 18th, 2013
-
 //
-//  AddBookViewController.m
+//  SettingsViewController.m
 //  MUXProject4
 //
-//  Created by Elijah Freestone on 10/22/13.
+//  Created by Elijah Freestone on 10/24/13.
 //  Copyright (c) 2013 Elijah Freestone. All rights reserved.
 //
 
-#import "AddBookViewController.h"
-//Import active books view controller
-#import "ActiveViewController.h"
+#import "SettingsViewController.h"
 
-@interface AddBookViewController ()
+@interface SettingsViewController ()
 
 @end
 
-@implementation AddBookViewController
-
-//Synthesize for getters/setters
-@synthesize titleTextField, authorTextField, activeSwitch, placeLabel, placeTextField, publisherTextField, dateTextField, isbnTextField, eBookSwitch;
-
-//Synthesize for getter/setter
-//@synthesize delegate;
+@implementation SettingsViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -38,10 +25,6 @@
 
 - (void)viewDidLoad
 {
-    //Override background and apply image
-    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background-reverse"]];
-    self.tableView.backgroundColor = [UIColor clearColor];
-    
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -59,7 +42,7 @@
 
 #pragma mark - Table view data source
 
-/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
@@ -81,7 +64,7 @@
     // Configure the cell...
     
     return cell;
-}*/
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -133,48 +116,5 @@
 }
 
  */
-
-//Triggered when cancel button is hit
-- (IBAction)onCancel:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
-	//[self.delegate addBooksViewControllerDidCancel:self];
-}
-//Triggered when save button is hit
-- (IBAction)onSave:(id)sender{
-    //Create and display alert when save button is hit
-    UIAlertView *savedAlert = [[UIAlertView alloc] initWithTitle: @"Book Saved" message: @"Your book would have been saved, but this bit of code hasn't been written yet." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [savedAlert show];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-	//[self.delegate addBooksViewControllerDidSave:self];
-}
-//Triggered when activeSwitch value changes
-- (IBAction)onActive:(id)sender {
-    if (activeSwitch.isOn) {
-        //Enable place text field
-        placeTextField.enabled = YES;
-        //Change color of text field to white
-        placeTextField.backgroundColor = [UIColor whiteColor];
-        //Change color of place label to black
-        placeLabel.textColor = [UIColor blackColor];
-    } else {
-        //Disable place text field
-        placeTextField.enabled = NO;
-        //Change color of text field to light gray
-        placeTextField.backgroundColor = [UIColor lightGrayColor];
-        //Change color of place label to light gray
-        placeLabel.textColor = [UIColor lightGrayColor];
-    }
-}
-
-#pragma mark - AddBookViewControllerDelegate
-
-- (void)addBookViewControllerDidCancel:(AddBookViewController *)controller {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)addBookViewControllerDidSave:(AddBookViewController *)controller {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 @end
