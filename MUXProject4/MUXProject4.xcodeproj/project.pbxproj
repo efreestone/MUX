@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B85E1A6B1819AEAC0029E307 /* background-reverse.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E1A6A1819AEAC0029E307 /* background-reverse.png */; };
 		B85E1A6E1819CE4D0029E307 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B85E1A6D1819CE4D0029E307 /* SettingsViewController.m */; };
+		B85E1A711819D9E10029E307 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B85E1A701819D9E10029E307 /* DetailViewController.m */; };
+		B85E1A731819E1F60029E307 /* default-cover-image.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E1A721819E1F60029E307 /* default-cover-image.png */; };
+		B85E1A751819E5180029E307 /* all-books-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E1A741819E5180029E307 /* all-books-cell.png */; };
 		B89066B918161E83009F1E1F /* BookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B89066B818161E83009F1E1F /* BookCell.m */; };
 		B89066BB18162478009F1E1F /* designing-the-obvious.png in Resources */ = {isa = PBXBuildFile; fileRef = B89066BA18162478009F1E1F /* designing-the-obvious.png */; };
 		B89066BD1816252A009F1E1F /* midnight.png in Resources */ = {isa = PBXBuildFile; fileRef = B89066BC1816252A009F1E1F /* midnight.png */; };
@@ -61,6 +64,10 @@
 		B85E1A6A1819AEAC0029E307 /* background-reverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-reverse.png"; sourceTree = "<group>"; };
 		B85E1A6C1819CE4D0029E307 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		B85E1A6D1819CE4D0029E307 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		B85E1A6F1819D9E10029E307 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B85E1A701819D9E10029E307 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B85E1A721819E1F60029E307 /* default-cover-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-cover-image.png"; sourceTree = "<group>"; };
+		B85E1A741819E5180029E307 /* all-books-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all-books-cell.png"; sourceTree = "<group>"; };
 		B89066B718161E83009F1E1F /* BookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookCell.h; sourceTree = "<group>"; };
 		B89066B818161E83009F1E1F /* BookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookCell.m; sourceTree = "<group>"; };
 		B89066BA18162478009F1E1F /* designing-the-obvious.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "designing-the-obvious.png"; sourceTree = "<group>"; };
@@ -174,10 +181,12 @@
 				B8F8DE93181605F600081567 /* ActiveViewController.m */,
 				B8F8DE951816067F00081567 /* AllViewController.h */,
 				B8F8DE961816067F00081567 /* AllViewController.m */,
-				B898C54E1817780700DB2DF6 /* AddBookViewController.h */,
-				B898C54F1817780700DB2DF6 /* AddBookViewController.m */,
 				B85E1A6C1819CE4D0029E307 /* SettingsViewController.h */,
 				B85E1A6D1819CE4D0029E307 /* SettingsViewController.m */,
+				B898C54E1817780700DB2DF6 /* AddBookViewController.h */,
+				B898C54F1817780700DB2DF6 /* AddBookViewController.m */,
+				B85E1A6F1819D9E10029E307 /* DetailViewController.h */,
+				B85E1A701819D9E10029E307 /* DetailViewController.m */,
 				B89E96651815DC1E00965611 /* Images.xcassets */,
 				B89E96511815DC1E00965611 /* Supporting Files */,
 				B8F8DE991816081900081567 /* ActiveBooks.h */,
@@ -222,6 +231,8 @@
 		B89E96821815DC6F00965611 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				B85E1A741819E5180029E307 /* all-books-cell.png */,
+				B85E1A721819E1F60029E307 /* default-cover-image.png */,
 				B85E1A6A1819AEAC0029E307 /* background-reverse.png */,
 				B898C54C1817727E00DB2DF6 /* designing-test.png */,
 				B898C54A18176CFF00DB2DF6 /* iphone-hacks.png */,
@@ -328,9 +339,11 @@
 				B89066C118162666009F1E1F /* objective-c-programming.png in Resources */,
 				B89E968B1815DC6F00965611 /* active@2x.png in Resources */,
 				B898C54D1817727E00DB2DF6 /* designing-test.png in Resources */,
+				B85E1A751819E5180029E307 /* all-books-cell.png in Resources */,
 				B898C5461817676A00DB2DF6 /* core-jini.png in Resources */,
 				B89E968D1815DC6F00965611 /* all@2x.png in Resources */,
 				B89E968A1815DC6F00965611 /* active.png in Resources */,
+				B85E1A731819E1F60029E307 /* default-cover-image.png in Resources */,
 				B89E96901815DC6F00965611 /* settings@2x.png in Resources */,
 				B898C5451817676A00DB2DF6 /* cocoa-and-objective-c.png in Resources */,
 				B89E968C1815DC6F00965611 /* all.png in Resources */,
@@ -364,6 +377,7 @@
 				B89E96571815DC1E00965611 /* main.m in Sources */,
 				B85E1A6E1819CE4D0029E307 /* SettingsViewController.m in Sources */,
 				B8F8DE9B1816081900081567 /* ActiveBooks.m in Sources */,
+				B85E1A711819D9E10029E307 /* DetailViewController.m in Sources */,
 				B8F8DE971816067F00081567 /* AllViewController.m in Sources */,
 				B898C5501817780700DB2DF6 /* AddBookViewController.m in Sources */,
 				B8F8DE9F1816084300081567 /* AllBooks.m in Sources */,

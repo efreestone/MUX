@@ -93,6 +93,13 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
+//ViewWillAppear to override background image. Going back from a detail view will change the background image to reverse without this
+-(void)viewWillAppear:(BOOL)animated {
+    //Override background and apply image
+    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
