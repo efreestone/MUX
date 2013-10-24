@@ -36,7 +36,7 @@
 - (void)viewDidLoad
 {
     //Override background and apply image
-    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background-reverse"]];
     self.tableView.backgroundColor = [UIColor clearColor];
     
     [super viewDidLoad];

@@ -141,7 +141,7 @@
                     <navigationItem key="navigationItem" title="Active Books" id="2ga-Mw-YZ5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ntf-r1-bZ1">
                             <connections>
-                                <segue destination="asj-Jx-gCR" kind="modal" identifier="AddBook" id="nRf-6n-lYo"/>
+                                <segue destination="asj-Jx-gCR" kind="modal" identifier="AddBook" modalTransitionStyle="flipHorizontal" id="nRf-6n-lYo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
