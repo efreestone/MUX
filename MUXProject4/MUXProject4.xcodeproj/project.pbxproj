@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B85E1A6B1819AEAC0029E307 /* background-reverse.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E1A6A1819AEAC0029E307 /* background-reverse.png */; };
 		B89066B918161E83009F1E1F /* BookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B89066B818161E83009F1E1F /* BookCell.m */; };
 		B89066BB18162478009F1E1F /* designing-the-obvious.png in Resources */ = {isa = PBXBuildFile; fileRef = B89066BA18162478009F1E1F /* designing-the-obvious.png */; };
 		B89066BD1816252A009F1E1F /* midnight.png in Resources */ = {isa = PBXBuildFile; fileRef = B89066BC1816252A009F1E1F /* midnight.png */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B85E1A6A1819AEAC0029E307 /* background-reverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-reverse.png"; sourceTree = "<group>"; };
 		B89066B718161E83009F1E1F /* BookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookCell.h; sourceTree = "<group>"; };
 		B89066B818161E83009F1E1F /* BookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookCell.m; sourceTree = "<group>"; };
 		B89066BA18162478009F1E1F /* designing-the-obvious.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "designing-the-obvious.png"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 		B89E96821815DC6F00965611 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				B85E1A6A1819AEAC0029E307 /* background-reverse.png */,
 				B898C54C1817727E00DB2DF6 /* designing-test.png */,
 				B898C54A18176CFF00DB2DF6 /* iphone-hacks.png */,
 				B89E96831815DC6F00965611 /* active.png */,
@@ -314,6 +317,7 @@
 			files = (
 				B89066BB18162478009F1E1F /* designing-the-obvious.png in Resources */,
 				B89E96661815DC1E00965611 /* Images.xcassets in Resources */,
+				B85E1A6B1819AEAC0029E307 /* background-reverse.png in Resources */,
 				B89E968E1815DC6F00965611 /* background.png in Resources */,
 				B89066BD1816252A009F1E1F /* midnight.png in Resources */,
 				B89066C118162666009F1E1F /* objective-c-programming.png in Resources */,

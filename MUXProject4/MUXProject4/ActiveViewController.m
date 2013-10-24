@@ -197,12 +197,12 @@
 
 #pragma mark - AddBookViewControllerDelegate
 
-- (void)addBookViewControllerDidCancel:(AddBookViewController *)controller {
+/*- (void)addBookViewControllerDidCancel:(AddBookViewController *)controller {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)addBookViewControllerDidSave:(AddBookViewController *)controller {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
+}*/
 
 @end

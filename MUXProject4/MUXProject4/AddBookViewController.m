@@ -21,6 +21,9 @@
 
 @implementation AddBookViewController
 
+//Synthesize for getters/setters
+@synthesize titleTextField, authorTextField, activeSwitch, placeLabel, placeTextField, publisherTextField, dateTextField, isbnTextField, eBookSwitch;
+
 //Synthesize for getter/setter
 //@synthesize delegate;
 
@@ -56,7 +59,7 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
@@ -78,7 +81,7 @@
     // Configure the cell...
     
     return cell;
-}
+}*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -140,6 +143,34 @@
 - (IBAction)onSave:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
 	//[self.delegate addBooksViewControllerDidSave:self];
+}
+//Triggered when activeSwitch value changes
+- (IBAction)onActive:(id)sender {
+    if (activeSwitch.isOn) {
+        //Enable place text field
+        placeTextField.enabled = YES;
+        //Change color of text field to white
+        placeTextField.backgroundColor = [UIColor whiteColor];
+        //Change color of place label to black
+        placeLabel.textColor = [UIColor blackColor];
+    } else {
+        //Enable place text field
+        placeTextField.enabled = NO;
+        //Change color of text field to light gray
+        placeTextField.backgroundColor = [UIColor lightGrayColor];
+        //Change color of place label to light gray
+        placeLabel.textColor = [UIColor lightGrayColor];
+    }
+}
+
+#pragma mark - AddBookViewControllerDelegate
+
+- (void)addBookViewControllerDidCancel:(AddBookViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addBookViewControllerDidSave:(AddBookViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
