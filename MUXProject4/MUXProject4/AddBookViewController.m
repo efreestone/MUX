@@ -142,7 +142,7 @@
 //Triggered when save button is hit
 - (IBAction)onSave:(id)sender{
     //Create and display alert when save button is hit
-    UIAlertView *savedAlert = [[UIAlertView alloc] initWithTitle: @"Book Saved" message: @"Your book would have been saved, but this bit of code hasn't been written yet." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *savedAlert = [[UIAlertView alloc] initWithTitle: @"Book Would Have Saved!!" message: @"Your book would have been saved, but this bit of code hasn't been written yet." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [savedAlert show];
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -169,12 +169,12 @@
 
 #pragma mark - AddBookViewControllerDelegate
 
-- (void)addBookViewControllerDidCancel:(AddBookViewController *)controller {
+/*- (void)addBookViewControllerDidCancel:(AddBookViewController *)controller {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)addBookViewControllerDidSave:(AddBookViewController *)controller {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
+}*/
 
 @end

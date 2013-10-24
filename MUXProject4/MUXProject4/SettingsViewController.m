@@ -1,3 +1,8 @@
+// Elijah Freestone
+// MUX 1310
+// Project 4
+// October 18th, 2013
+
 //
 //  SettingsViewController.m
 //  MUXProject4
@@ -14,6 +19,9 @@
 
 @implementation SettingsViewController
 
+//Synthesize for setter/getter
+@synthesize saveSettings;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -25,6 +33,14 @@
 
 - (void)viewDidLoad
 {
+    //Override background and apply image
+    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
+    //Override inset to provide space between nav bar and first cell
+    UIEdgeInsets inset = UIEdgeInsetsMake(65, 0, 0, 0);
+    self.tableView.contentInset = inset;
+    
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -40,9 +56,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Triggered when save button is hit
+- (IBAction)onSave:(id)sender{
+    //Create and display alert when save button is hit
+    UIAlertView *savedAlert = [[UIAlertView alloc] initWithTitle: @"Settings Would Have Saved!!" message: @"Your Settings would have been saved, but this bit of code hasn't been written yet." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [savedAlert show];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+	//[self.delegate addBooksViewControllerDidSave:self];
+}
+
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
@@ -64,7 +90,7 @@
     // Configure the cell...
     
     return cell;
-}
+}*/
 
 /*
 // Override to support conditional editing of the table view.
