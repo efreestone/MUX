@@ -141,6 +141,9 @@
 }
 //Triggered when save button is hit
 - (IBAction)onSave:(id)sender{
+    UIAlertView *savedAlert = [[UIAlertView alloc] initWithTitle: @"Book Saved" message: @"Your book would have been saved, however this part of code hasn't been written yet" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [savedAlert show];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 	//[self.delegate addBooksViewControllerDidSave:self];
 }
@@ -154,7 +157,7 @@
         //Change color of place label to black
         placeLabel.textColor = [UIColor blackColor];
     } else {
-        //Enable place text field
+        //Disable place text field
         placeTextField.enabled = NO;
         //Change color of text field to light gray
         placeTextField.backgroundColor = [UIColor lightGrayColor];
