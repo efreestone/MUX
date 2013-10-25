@@ -40,16 +40,6 @@
     self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     self.tableView.backgroundColor = [UIColor clearColor];
     
-    /* book info vars
-     +coverImage;
-     +bookTitle;
-     +authorName;
-     +currentPage;
-     publisher;
-     datePublished;
-     isbnNumber;
-     bookType;*/
-    
     //Create all books array and fill. Each new book entry is a new instance of AllBooks container class
     allBooksArray = [NSMutableArray arrayWithCapacity:20];
     //Book 1 and cast/alloc of AllBooks
@@ -160,6 +150,20 @@
     [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectMake(0,0,0,0)]];
     
     return cell2;
+}
+
+//Built in function to check editing style (-=delete, +=add)
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Check if in delete mode
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"We want to delete row = %d", indexPath.row);
+        
+        //Remove the deleted object from locationsArray
+        [allBooksArray removeObjectAtIndex:indexPath.row];
+        
+        //Remove object from table view with animation. Receiving warning "local declaration of "tableView" hides instance variable". I may be missing something here but isn't this an Accessor method?
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
+    }
 }
 
 /*

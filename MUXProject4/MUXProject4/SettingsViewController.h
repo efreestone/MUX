@@ -21,4 +21,7 @@
 //Declare IBAction for save button to display alert view
 - (IBAction)onSave:(id)sender;
 
+//Declare IBAction for right swipe to save
+-(IBAction)onSwipe:(UISwipeGestureRecognizer *)swipeRecognizer;
+
 @end

@@ -142,6 +142,20 @@
     return cell;
 }
 
+//Built in function to check editing style (-=delete, +=add)
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Check if in delete mode
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"We want to delete row = %d", indexPath.row);
+        
+        //Remove the deleted object from locationsArray
+        [activeBooksArray removeObjectAtIndex:indexPath.row];
+        
+        //Remove object from table view with animation. Receiving warning "local declaration of "tableView" hides instance variable". I may be missing something here but isn't this an Accessor method?
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
+    }
+}
+
 //Built in function to grab row selected in table view. Not currently working so not in use.
 /*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@"Row = %d Album = %@", indexPath.row, [albumArray objectAtIndex:indexPath.row]);
