@@ -65,6 +65,15 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 	//[self.delegate addBooksViewControllerDidSave:self];
 }
+//onSwipe function to grab swipe and trigger save
+-(IBAction)onSwipe:(UISwipeGestureRecognizer *)swipeRecognizer {
+    if (swipeRecognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+        UIAlertView *savedAlert = [[UIAlertView alloc] initWithTitle: @"Settings Would Have Saved!!" message: @"Your Settings would have been saved, but this bit of code hasn't been written yet." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [savedAlert show];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
 
 #pragma mark - Table view data source
 

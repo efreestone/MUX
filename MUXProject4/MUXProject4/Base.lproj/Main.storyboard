@@ -33,6 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <sections>
                             <tableViewSection id="Jec-pM-9pR">
                                 <cells>
@@ -258,6 +259,8 @@
                         <connections>
                             <outlet property="dataSource" destination="6US-6t-jUm" id="UrD-WO-mRw"/>
                             <outlet property="delegate" destination="6US-6t-jUm" id="T2Q-wE-XrS"/>
+                            <outletCollection property="gestureRecognizers" destination="OrX-rE-gVc" appends="YES" id="yff-e0-rWx"/>
+                            <outletCollection property="gestureRecognizers" destination="OrX-rE-gVc" appends="YES" id="20t-he-beH"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Book" id="yA1-rY-eIW">
@@ -285,8 +288,13 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTq-hg-cnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="OrX-rE-gVc">
+                    <connections>
+                        <action selector="onSwipe:" destination="6US-6t-jUm" id="JbX-Ea-jqZ"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1717" y="-482"/>
+            <point key="canvasLocation" x="1705" y="180"/>
         </scene>
         <!--Active View Controller - Active Books-->
         <scene sceneID="dFg-6Y-bVy">
@@ -336,6 +344,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <connections>
                                     <outlet property="authorLabel" destination="Uyi-Mz-5Wa" id="LQm-RL-9qg"/>
@@ -633,7 +642,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XyC-Pn-BRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="180"/>
+            <point key="canvasLocation" x="1331" y="-482"/>
         </scene>
         <!--Navigation Controller - All Books-->
         <scene sceneID="7vh-7z-eby">
@@ -659,6 +668,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <sections>
                             <tableViewSection id="2D4-k8-82E">
                                 <cells>
@@ -759,6 +769,9 @@
                                 </cells>
                             </tableViewSection>
                         </sections>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zVV-iG-WHC" appends="YES" id="pml-Fh-eug"/>
+                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="4Ac-oi-Xl7">
                         <barButtonItem key="leftBarButtonItem" systemItem="save" id="Ye6-CE-xvn">
@@ -777,6 +790,11 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ruw-wN-DYN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="zVV-iG-WHC">
+                    <connections>
+                        <action selector="onSwipe:" destination="ZeR-z4-xHG" id="c7c-0j-3dN"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="956" y="839"/>
         </scene>
@@ -812,7 +830,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6YA-EV-i85" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="-482"/>
+            <point key="canvasLocation" x="1331" y="180"/>
         </scene>
     </scenes>
     <resources>

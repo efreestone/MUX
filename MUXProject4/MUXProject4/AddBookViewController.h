@@ -43,5 +43,8 @@
 //Declare IBAction for active switch to enable place text field
 - (IBAction)onActive:(id)sender;
 
+//Declare swipe to save function
+-(IBAction)onSwipe:(UISwipeGestureRecognizer *)swipeRecognizer;
+
 
 @end
