@@ -13,6 +13,8 @@
 		B85E1A731819E1F60029E307 /* default-cover-image.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E1A721819E1F60029E307 /* default-cover-image.png */; };
 		B85E1A751819E5180029E307 /* all-books-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E1A741819E5180029E307 /* all-books-cell.png */; };
 		B85E1A771819E7FF0029E307 /* active-books-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E1A761819E7FF0029E307 /* active-books-cell.png */; };
+		B871A0BB1819F20B008FEE99 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B871A0B91819F20B008FEE99 /* Default-568h@2x.png */; };
+		B871A0BC1819F20B008FEE99 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B871A0BA1819F20B008FEE99 /* Default@2x.png */; };
 		B89066B918161E83009F1E1F /* BookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B89066B818161E83009F1E1F /* BookCell.m */; };
 		B89066BB18162478009F1E1F /* designing-the-obvious.png in Resources */ = {isa = PBXBuildFile; fileRef = B89066BA18162478009F1E1F /* designing-the-obvious.png */; };
 		B89066BD1816252A009F1E1F /* midnight.png in Resources */ = {isa = PBXBuildFile; fileRef = B89066BC1816252A009F1E1F /* midnight.png */; };
@@ -70,6 +72,8 @@
 		B85E1A721819E1F60029E307 /* default-cover-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-cover-image.png"; sourceTree = "<group>"; };
 		B85E1A741819E5180029E307 /* all-books-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all-books-cell.png"; sourceTree = "<group>"; };
 		B85E1A761819E7FF0029E307 /* active-books-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "active-books-cell.png"; sourceTree = "<group>"; };
+		B871A0B91819F20B008FEE99 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B871A0BA1819F20B008FEE99 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B89066B718161E83009F1E1F /* BookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookCell.h; sourceTree = "<group>"; };
 		B89066B818161E83009F1E1F /* BookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookCell.m; sourceTree = "<group>"; };
 		B89066BA18162478009F1E1F /* designing-the-obvious.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "designing-the-obvious.png"; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 		B89E96501815DC1E00965611 /* MUXProject4 */ = {
 			isa = PBXGroup;
 			children = (
+				B871A0B91819F20B008FEE99 /* Default-568h@2x.png */,
+				B871A0BA1819F20B008FEE99 /* Default@2x.png */,
 				B89E96821815DC6F00965611 /* images */,
 				B89E96591815DC1E00965611 /* AppDelegate.h */,
 				B89E965A1815DC1E00965611 /* AppDelegate.m */,
@@ -338,6 +344,7 @@
 				B89E96661815DC1E00965611 /* Images.xcassets in Resources */,
 				B85E1A6B1819AEAC0029E307 /* background-reverse.png in Resources */,
 				B89E968E1815DC6F00965611 /* background.png in Resources */,
+				B871A0BC1819F20B008FEE99 /* Default@2x.png in Resources */,
 				B89066BD1816252A009F1E1F /* midnight.png in Resources */,
 				B89066C118162666009F1E1F /* objective-c-programming.png in Resources */,
 				B89E968B1815DC6F00965611 /* active@2x.png in Resources */,
@@ -357,6 +364,7 @@
 				B85E1A771819E7FF0029E307 /* active-books-cell.png in Resources */,
 				B89066C318162666009F1E1F /* working-across-cultures.png in Resources */,
 				B89066C218162666009F1E1F /* sworn-to-silence.png in Resources */,
+				B871A0BB1819F20B008FEE99 /* Default-568h@2x.png in Resources */,
 				B89E965E1815DC1E00965611 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,8 +518,6 @@
 		B89E967D1815DC2000965611 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MUXProject4/MUXProject4-Prefix.pch";
 				INFOPLIST_FILE = "MUXProject4/MUXProject4-Info.plist";
@@ -523,8 +529,6 @@
 		B89E967E1815DC2000965611 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MUXProject4/MUXProject4-Prefix.pch";
 				INFOPLIST_FILE = "MUXProject4/MUXProject4-Info.plist";
