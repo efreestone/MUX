@@ -16,6 +16,8 @@
 #import "ActiveBooks.h"
 //Import book cell
 #import "BookCell.h"
+//Import detail view
+#import "DetailViewController.h"
 
 @interface ActiveViewController ()
 
@@ -139,6 +141,31 @@
     
     return cell;
 }
+
+//Built in function to grab row selected in table view. Not currently working so not in use.
+/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //NSLog(@"Row = %d Album = %@", indexPath.row, [albumArray objectAtIndex:indexPath.row]);
+    
+    //Allocate detail view controller
+    DetailViewController *detailViewController = [[DetailViewController alloc] init];
+    if (detailViewController != nil) {
+        //Push detail view on top of albums view (not from project 1)
+        //[self.navigationController pushViewController:detailViewController animated:true];
+
+        //Change navbar title of detail view to band name (modified from project 1)
+        //detailViewController.title = (NSString *)[activeBooksArray objectAtIndex:indexPath.row];
+        //Add band name to first label on detail view
+        //detailViewController.titleLabel.text = [NSString stringWithFormat:@"Test"]; //, [activeBooksArray objectAtIndex:indexPath.row]]; //objectForKey:@"bookTitle"]
+        //Add album name to second label on detail view
+        //detailViewController.authorLabel.text = [NSString stringWithFormat:@"Album Name: %@", [activeBooksArray objectAtIndex:indexPath.row]];
+        //Add release date to third label on detail view
+        //detailViewController.placeLabel.text = [NSString stringWithFormat:@"Year Released: %@", [activeBooksArray objectAtIndex:indexPath.row]];
+        //Add country of origin to fourth label on detail view
+        ///detailViewController.publisherLabel.text = [NSString stringWithFormat:@"Country of Origin: %@", [activeBooksArray objectAtIndex:indexPath.row]];
+    }
+}*/
+
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -451,7 +451,7 @@
             </objects>
             <point key="canvasLocation" x="956" y="180"/>
         </scene>
-        <!--Detail View Controller - Book Title-->
+        <!--Detail View Controller-->
         <scene sceneID="oaI-Q6-Z7l">
             <objects>
                 <tableViewController id="Ggs-68-LhT" customClass="DetailViewController" sceneMemberID="viewController">
@@ -616,7 +616,9 @@
                             <outlet property="delegate" destination="Ggs-68-LhT" id="Yxk-kp-6yi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Book Title" id="FET-RX-3NN"/>
+                    <navigationItem key="navigationItem" id="FET-RX-3NN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="lfs-6Y-SaG"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="authorLabel" destination="J5h-nL-dcr" id="3lg-YI-vRr"/>
                         <outlet property="bookTypeLabel" destination="TsN-Pr-bh8" id="HeL-lo-4pY"/>
