@@ -16,6 +16,8 @@
 #import "ActiveBooks.h"
 //Import book cell
 #import "BookCell.h"
+//Import detail view
+#import "DetailViewController.h"
 
 @interface ActiveViewController ()
 
@@ -45,6 +47,44 @@
     UIEdgeInsets inset = UIEdgeInsetsMake(15, 0, 0, 0);
     self.tableView.contentInset = inset;
     
+    //Create active books array and fill. Each new book entry is a new instance of ActiveBooks container class
+    activeBooksArray = [NSMutableArray arrayWithCapacity:20];
+    //Book 1 and cast/alloc of ActiveBooks
+	ActiveBooks *activeBook = [[ActiveBooks alloc] init];
+    activeBook.coverImage = [UIImage imageNamed:@"designing-the-obvious.png"];
+	activeBook.authorName = @"Robert Hoekman, Jr.";
+	activeBook.bookTitle = @"Designing The Obvious";
+	activeBook.currentPage = @"Page 158 (Updated 8-6-13)";
+	[activeBooksArray addObject:activeBook];
+    //Book 2
+	activeBook = [[ActiveBooks alloc] init];
+    activeBook.coverImage = [UIImage imageNamed:@"midnight.png"];
+    activeBook.authorName = @"Dean Koontz";
+	activeBook.bookTitle = @"Midnight";
+	activeBook.currentPage = @"Page 91 (Updated 7-18-13)";
+	[activeBooksArray addObject:activeBook];
+    //Book 3
+    activeBook = [[ActiveBooks alloc] init];
+    activeBook.coverImage = [UIImage imageNamed:@"objective-c-programming.png"];
+    activeBook.authorName = @"Aaron Hillegass";
+	activeBook.bookTitle = @"Objective-C Programming";
+	activeBook.currentPage = @"Page 190 (Updated 10-10-13)";
+	[activeBooksArray addObject:activeBook];
+    //Book 4
+    activeBook = [[ActiveBooks alloc] init];
+    activeBook.coverImage = [UIImage imageNamed:@"sworn-to-silence.png"];
+    activeBook.authorName = @"Linda Castilla";
+	activeBook.bookTitle = @"Sworn to Silence";
+	activeBook.currentPage = @"Page 34 (Updated 9-12-13)";
+	[activeBooksArray addObject:activeBook];
+    //Book 5
+    activeBook = [[ActiveBooks alloc] init];
+    activeBook.coverImage = [UIImage imageNamed:@"working-across-cultures.png"];
+    activeBook.authorName = @"John Hooker";
+	activeBook.bookTitle = @"Working Across Cultures";
+	activeBook.currentPage = @"Page 331 (Updated 4-1-13)";
+	[activeBooksArray addObject:activeBook];
+    
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -55,6 +95,13 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
+//ViewWillAppear to override background image. Going back from a detail view will change the background image to reverse without this
+-(void)viewWillAppear:(BOOL)animated {
+    //Override background and apply image
+    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -63,7 +110,7 @@
 
 #pragma mark - Table view data source
 
-//Override to remove extra seperator lines after last cell. Works but removes the line below the last cell which I want to keep
+//Override to remove extra seperator lines after last cell. Works but removes the line below the last cell which I want to keep. Alternative is in cellForRowAtIndexPath
 /*- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     // This will create a "invisible" footer
     return 0.01f;
@@ -94,6 +141,31 @@
     
     return cell;
 }
+
+//Built in function to grab row selected in table view. Not currently working so not in use.
+/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //NSLog(@"Row = %d Album = %@", indexPath.row, [albumArray objectAtIndex:indexPath.row]);
+    
+    //Allocate detail view controller
+    DetailViewController *detailViewController = [[DetailViewController alloc] init];
+    if (detailViewController != nil) {
+        //Push detail view on top of albums view (not from project 1)
+        //[self.navigationController pushViewController:detailViewController animated:true];
+
+        //Change navbar title of detail view to band name (modified from project 1)
+        //detailViewController.title = (NSString *)[activeBooksArray objectAtIndex:indexPath.row];
+        //Add band name to first label on detail view
+        //detailViewController.titleLabel.text = [NSString stringWithFormat:@"Test"]; //, [activeBooksArray objectAtIndex:indexPath.row]]; //objectForKey:@"bookTitle"]
+        //Add album name to second label on detail view
+        //detailViewController.authorLabel.text = [NSString stringWithFormat:@"Album Name: %@", [activeBooksArray objectAtIndex:indexPath.row]];
+        //Add release date to third label on detail view
+        //detailViewController.placeLabel.text = [NSString stringWithFormat:@"Year Released: %@", [activeBooksArray objectAtIndex:indexPath.row]];
+        //Add country of origin to fourth label on detail view
+        ///detailViewController.publisherLabel.text = [NSString stringWithFormat:@"Country of Origin: %@", [activeBooksArray objectAtIndex:indexPath.row]];
+    }
+}*/
+
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -145,5 +217,26 @@
 }
 
  */
+
+//Function to notify of delegate
+/*- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	if ([segue.identifier isEqualToString:@"AddBook"]) {
+		UINavigationController *navigationController =
+        segue.destinationViewController;
+		AddBookViewController *addBookViewController = [[navigationController viewControllers] objectAtIndex:0];
+		addBookViewController.delegate = self;
+	}
+}*/
+
+
+#pragma mark - AddBookViewControllerDelegate
+
+/*- (void)addBookViewControllerDidCancel:(AddBookViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addBookViewControllerDidSave:(AddBookViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}*/
 
 @end

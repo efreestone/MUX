@@ -16,6 +16,7 @@
 @interface AllBooks : NSObject
 
 //Declare strings for book info
+@property (nonatomic, copy) UIImage *coverImage;
 @property (nonatomic, copy) NSString *bookTitle;
 @property (nonatomic, copy) NSString *authorName;
 @property (nonatomic, copy) NSString *currentPage;
